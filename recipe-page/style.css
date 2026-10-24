@@ -1,4 +1,9 @@
-  .chinese-step {
+body {
+    background-color: #FFF9D9;
+}
+
+
+.chinese-step {
       display: block;
       margin-left: 20px;
   }
@@ -37,6 +42,3 @@
     background-color: lightgray;
 }
 
-body {
-    background-color: #F8F1E6;
-}
