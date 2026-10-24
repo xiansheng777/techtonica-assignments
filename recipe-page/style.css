@@ -1,13 +1,42 @@
+@font-face {
+    font-family: "Lemi";
+    src: url("fonts/font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[lang="zh-CN"] {
+    font-family: "Lemi", sans-serif;
+}
+
+:is(.english-intro, .chinese-intro) {
+    text-align: center;
+    width: 700px;
+    max-width: 100%;
+    transform: translateX(-100px);
+}
+
 body {
     background-color: #FFF9D9;
 }
 
-h1,h2 {
-    color:#795548;
+h1,
+h2 {
+    color: #795548;
     font-family: "Sniglet", system-ui;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 52px;
     letter-spacing: 2px;
+    -webkit-text-stroke: 3.5px;
+}
+
+h3 {
+    font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px;
+    margin: 0 0 5px 0;
 }
 
 p {
@@ -17,42 +46,57 @@ p {
     font-style: normal;
 }
 
+
 .chinese-step {
-      display: block;
-      margin-left: 20px;
-  }
-
-  .left {
-      width: 40%;
-  }
-
-  .youtube-button {
-      display: inline-block;
-      background-color: red;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-  }
-
-  .youtube-button:hover {
-      background-color: darkred;
-  }
-
-.ingredient-table {
-    border-collapse: collapse;
-    width: 100%;
+    display: block;
+    margin-left: 20px;
 }
 
-.ingredient-table th,
-.ingredient-table td {
+.left {
+    width: 40%;
+}
+
+.youtube-button {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.youtube-button:hover {
+    background-color: darkred;
+}
+
+.ingredient-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    font-family: "Sniglet", system-ui;
     border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+.ingredient-table :is(th, td) {
+    border: none;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .ingredient-table th {
-    background-color: lightgray;
+    background-color: #EAD8BD;
 }
 
+.ingredient-table th span[lang="zh-CN"] {
+    font-size: 28px;
+}
+
+.cooking-steps {
+    font-family: "Sniglet", system-ui;
+}
