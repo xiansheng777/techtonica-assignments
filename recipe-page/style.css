@@ -2,6 +2,16 @@ body {
     background-color: #FFF9D9;
 }
 
+h1,h2 {
+    color:#795548;
+    font-family: Georgia, serif;
+}
+
+p {
+    color: #5D5148;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
 
 .chinese-step {
       display: block;
