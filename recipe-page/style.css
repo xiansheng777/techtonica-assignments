@@ -4,13 +4,15 @@ body {
 
 h1,h2 {
     color:#795548;
-    font-family: Georgia, serif;
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
 }
 
 p {
     color: #5D5148;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .chinese-step {
