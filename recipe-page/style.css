@@ -5,29 +5,67 @@
     font-style: normal;
 }
 
+.top {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.left {
+    width: 600px;
+    float: left;
+    margin-left: 100px;
+    margin-bottom: 80px
+
+}
+
+.right {
+    width: 600px;
+    float: left;
+    margin-left: 300px;
+}
+
+.instructions h2 {
+    margin-top: 0;
+}
+
 [lang="zh-CN"] {
     font-family: "Lemi", sans-serif;
 }
 
 :is(.english-intro, .chinese-intro) {
     text-align: center;
-    width: 700px;
+    width: 600px;
     max-width: 100%;
-    transform: translateX(-100px);
+    transform: none;
+    margin: 20px auto;
+    font-size: 22px;
 }
 
 body {
     background-color: #FFF9D9;
 }
 
-h1,
-h2 {
+:is(.left h2, .right h2) {
+    text-align: center;
+}
+
+h1 {
     color: #795548;
     font-family: "Sniglet", system-ui;
     font-weight: 400;
     font-size: 52px;
     letter-spacing: 2px;
     -webkit-text-stroke: 3.5px;
+}
+
+h2 {
+    color: #795548;
+    font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 2px;
 }
 
 h3 {
@@ -46,29 +84,21 @@ p {
     font-style: normal;
 }
 
-
-.chinese-step {
-    display: block;
-    margin-left: 20px;
+.photo {
+    margin: 0;
 }
 
-.left {
-    width: 40%;
+.photo-credit {
+    font-family: "Sniglet", system-ui;
+    font-size: 13px;
+    color: #795548;
+    max-width: 600px;
+    text-align: center;
 }
 
-.youtube-button {
-    display: inline-block;
-    background-color: red;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-}
 
-.youtube-button:hover {
-    background-color: darkred;
-}
+
+
 
 .ingredient-table {
     border-collapse: separate;
@@ -97,6 +127,55 @@ p {
     font-size: 28px;
 }
 
+.ingredient-table td {
+    background-color: #fcf9eb;
+}
+
+:is(.cooking-steps, .chinese-step) {
+    font-size: 20px;
+}
+
 .cooking-steps {
     font-family: "Sniglet", system-ui;
+    text-align: center;
+    list-style-position: inside;
 }
+
+.chinese-step {
+    display: block;
+    margin-left: 20px;
+}
+
+.video-section p {
+    text-align: center;
+}
+
+
+
+.youtube-button {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.youtube-button:hover {
+    background-color: darkred;
+}
+
+.related-recipes {
+    text-align: center;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
