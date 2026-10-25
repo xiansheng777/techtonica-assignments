@@ -11,22 +11,29 @@
     text-align: center;
 }
 
-.left {
-    width: 600px;
-    float: left;
-    margin-left: 100px;
-    margin-bottom: 80px
+.main-content {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flow-root;
+}
 
+.left {
+    width: calc(50% - 15px);
+    max-width: 600px;
+    float: left;
+    margin-left: 0;
+    margin-top: 65px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
 }
 
 .right {
-    width: 600px;
-    float: left;
-    margin-left: 300px;
-}
-
-.instructions h2 {
-    margin-top: 0;
+    width: calc(50% - 15px);
+    max-width: 600px;
+    float: right;
+    margin-left: 30px;
+    box-sizing: border-box;
 }
 
 [lang="zh-CN"] {
@@ -36,7 +43,8 @@
 :is(.english-intro, .chinese-intro) {
     text-align: center;
     width: 600px;
-    max-width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
     transform: none;
     margin: 20px auto;
     font-size: 22px;
@@ -88,6 +96,13 @@ p {
     margin: 0;
 }
 
+.photo img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+}
+
 .photo-credit {
     font-family: "Sniglet", system-ui;
     font-size: 13px;
@@ -131,6 +146,100 @@ p {
     background-color: #fcf9eb;
 }
 
+.instructions h2 {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background-color: #EAD8BD;
+    padding: 25px 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.instructions-title>span {
+    position: relative;
+    z-index: 2;
+}
+
+.bowl {
+    position: absolute;
+    height: auto;
+    opacity: 0.32;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bowl1 {
+    width: 75px;
+    top: 10%;
+    left: 2%;
+    transform: rotate(-25deg);
+}
+
+.bowl2 {
+    width: 45px;
+    bottom: 5%;
+    left: 20%;
+    transform: rotate(35deg);
+}
+
+.bowl3 {
+    width: 60px;
+    top: 5%;
+    left: 48%;
+    transform: rotate(160deg);
+}
+
+.bowl4 {
+    width: 50px;
+    bottom: 8%;
+    right: 22%;
+    transform: rotate(-45deg);
+}
+
+.bowl5 {
+    width: 70px;
+    top: 15%;
+    right: 2%;
+    transform: rotate(70deg);
+}
+
+.bowl6 {
+    width: 40px;
+    bottom: 2%;
+    right: 8%;
+    transform: rotate(200deg);
+}
+
+.cooking-steps {
+    background-color: #fcf9eb;
+    padding: 20px;
+    margin-top: 0;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.cooking-steps::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/Yang Chow Fried Rice.png");
+    background-repeat: no-repeat;
+    background-position: center calc(50% + 31px);
+    background-size: 85% auto;
+
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
 :is(.cooking-steps, .chinese-step) {
     font-size: 20px;
 }
@@ -148,6 +257,13 @@ p {
 
 .video-section p {
     text-align: center;
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
 
 
@@ -179,3 +295,39 @@ footer {
     text-align: center;
 }
 
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .left,
+    .right {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+
+    .bowl1 {
+        width: 45px;
+    }
+
+    .bowl2 {
+        width: 30px;
+    }
+
+    .bowl3 {
+        width: 35px;
+    }
+
+    .bowl4 {
+        width: 30px;
+    }
+
+    .bowl5 {
+        width: 45px;
+    }
+
+    .bowl6 {
+        width: 25px;
+    }
+}
